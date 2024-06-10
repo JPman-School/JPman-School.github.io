@@ -7,9 +7,23 @@ document.getElementById('refresh-button').addEventListener('click', function() {
 
             const homeworks = data.split('\n');
             homeworks.forEach(homework => {
-                const listItem = document.createElement('li');
-                listItem.textContent = homework;
-                homeworkList.appendChild(listItem);
+                const [subject, dueDate, homeworkDescription] = homework.split(',');
+
+                const row = document.createElement('tr');
+
+                const subjectCell = document.createElement('td');
+                subjectCell.textContent = subject;
+                row.appendChild(subjectCell);
+
+                const dueDateCell = document.createElement('td');
+                dueDateCell.textContent = dueDate;
+                row.appendChild(dueDateCell);
+
+                const homeworkCell = document.createElement('td');
+                homeworkCell.textContent = homeworkDescription;
+                row.appendChild(homeworkCell);
+
+                homeworkList.appendChild(row);
             });
         })
         .catch(error => console.error('Error fetching the homework data:', error));
