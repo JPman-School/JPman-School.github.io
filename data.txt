@@ -1,1 +1,5 @@
-Math,12-06-2024,Do homework
+Math,2024-06-15,Complete exercises 5-10 on page 42,X,X
+Science,2024-06-18,Write a summary of chapter 3,,X
+History,2024-06-20,Prepare a presentation on World War II,X,
+English,2024-06-25,Read and analyze 'To Kill a Mockingbird',,
+Art,2024-06-30,Draw a landscape using pastels,X,X
