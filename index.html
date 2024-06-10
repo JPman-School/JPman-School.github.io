@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Homework</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <h1>Homework List</h1>
     <button id="refresh-button">Refresh Homework</button>
-    <ul id="homework-list">
-        <!-- Homework items will be loaded here -->
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Due Date</th>
+                <th>Homework</th>
+            </tr>
+        </thead>
+        <tbody id="homework-list">
+            <!-- Homework items will be loaded here -->
+        </tbody>
+    </table>
 
     <script src="script.js"></script>
 </body>
