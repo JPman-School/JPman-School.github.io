@@ -7,7 +7,7 @@ document.getElementById('refresh-button').addEventListener('click', function() {
 
             const homeworks = data.split('\n');
             homeworks.forEach(homework => {
-                const [subject, dueDate, homeworkDescription, compulsory] = homework.split(',');
+                const [subject, dueDate, homeworkDescription, compulsory, teams] = homework.split(',');
 
                 const row = document.createElement('tr');
 
@@ -26,6 +26,10 @@ document.getElementById('refresh-button').addEventListener('click', function() {
                 const compulsoryCell = document.createElement('td');
                 compulsoryCell.textContent = compulsory === 'X' ? 'X' : '';
                 row.appendChild(compulsoryCell);
+
+                const teamsCell = document.createElement('td');
+                teamsCell.textContent = teams === 'X' ? 'X' : '';
+                row.appendChild(teamsCell);
 
                 homeworkList.appendChild(row);
             });
